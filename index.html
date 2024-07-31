@@ -38,41 +38,26 @@
       </button>
 
       <!--logo del sitio web-->
-      <img src="https://th.bing.com/th/id/OIP.olbXS3cobSkJX2vNYAz5kQAAAA?w=302&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7"
-        alt="" />
+      <img id="logo"
+        src="https://th.bing.com/th/id/OIP.olbXS3cobSkJX2vNYAz5kQAAAA?w=302&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="" />
 
       <!--link que lleva al inicio-->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/index.html">Link</a>
           </li>
 
-          <!--lista desplegable-->
-          <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+          <!--boton de buscar-->
+          <form class="d-flex" role="search">
+            <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-secondary" type="submit">
+              Search
             </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </li>
-            </ul>
-          </div>
-        </ul>
-
-        <!--boton de buscar-->
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-secondary" type="submit">
-            Search
-          </button>
-        </form>
+          </form>
       </div>
     </div>
   </nav>
@@ -114,7 +99,7 @@
 </div>-->
 
 
-<!--
+  <!--
   <form id="product-form">
     <div>
       <label for="nombre">Nombre:</label>
@@ -151,53 +136,120 @@
     <p>
       Total (incluye IVA y pago con tarjeta): $<span id="total">0.00</span>
     </p>
-  </div>
+  </div>}
   </div>-->
-<!--**************************************************************************************************-->
-      <div class="container">
-          <h1>Formulario de Compra</h1>
-          <form id="product">
-              <div>
-                  <label for="nombre">Nombre:</label>
-                  <input type="text" id="nombre" name="nombre" required>
-              </div>
-              <div>
-                  <label for="marca">Marca:</label>
-                  <input type="text" id="marca" name="marca" required>
-              </div>
-              <div>
-                  <label for="categoria">Categoría:</label>
-                  <input type="text" id="categoria" name="categoria" required>
-              </div>
-              
-              <div>
-                  <label for="precio">Precio:</label>
-                  <input type="number" id="precio" name="precio" required>
-              </div>
-              <div>
-                  <label for="stock">Stock:</label>
-                  <input type="number" id="stock" name="stock" required>
-              </div>
-              <div>
-                <label for="tarjeta">¿Usar tarjeta de crédito?</label>
-                <input type="checkbox" id="tarjeta" name="tarjeta" />
-              </div>
-              <button type="submit">Agregar Producto</button>
-          </form>
-          
-          <h2>Carrito de Compra</h2>
-          <div id="product-cards" class="cards-container"></div>
-          
-          <div>
-              <p>Subtotal: $<span id="subtotal">0.00</span></p>
-          </div>
-          <div>
-            <button type="submit" onclick="button()">finalizar pedido</button>
-            <p>Total (incluye IVA y pago con tarjeta): $<span id="total">0.00</span></p>
-          </div>
+  <!--************************************carousel****************************************************-->
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="img" src="https://th.bing.com/th/id/OIP.u2Lz9GuUXLS9-cWFyuDg9AAAAA?rs=1&pid=ImgDetMain" class="d-block w-80" alt="...">
       </div>
-  
-  
+      <div class="carousel-item">
+        <img class="img" src="https://th.bing.com/th/id/OIP.E4vYvJiWCJadvt54Nc-yiAAAAA?w=269&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7" class="d-block w-80" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img class="img" src="https://th.bing.com/th/id/OIP.hwhZ43D3_YmmuBeADl9f2gAAAA?pid=ImgDet&w=204&h=159&c=7&dpr=1,2" class="d-block w-80" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--************************************tarjetas****************************************************-->
+  <div class="tarjetasCard">
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.A2R426r7b6y_QrvMNfcbgwHaHa?w=217&h=217&c=7&r=0&o=5&dpr=1.2&pid=1.7"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Remera Adidas</h5>
+        <p class="card-text">$23.000</p>
+       
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.z9EjyQMGOKpIaKKxcbFBcgHaHa?w=199&h=200&c=7&r=0&o=5&dpr=1.2&pid=1.7"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pantalon Largo Adidas</h5>
+        <p class="card-text">$50.500</p>
+        
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.tbqtkVhBMD_lIN6jDf3nMgHaHa?w=212&h=211&c=7&r=0&o=5&dpr=1.2&pid=1.7"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pantalon Corto Adidas</h5>
+        <p class="card-text">$15.000</p>
+        
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://th.bing.com/th/id/OIP.uRowa0yDnEO38oNt3EVBMAHaHa?w=172&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7"
+        class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Zapatillas Adidas</h5>
+        <p class="card-text">$150.000</p>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--**************************************************************************************************-->
+  <div class="container">
+    <h1>Formulario de Compra</h1><!--titulo del formulario-->
+    <form id="product"> <!--la coleccion  -->
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div>
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required>
+      </div>
+      <div>
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" required>
+      </div>
+
+      <div>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required>
+      </div>
+      <div>
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" required>
+      </div>
+      <div>
+        <label for="tarjeta">¿Usar tarjeta de crédito?</label>
+        <input type="checkbox" id="tarjeta" name="tarjeta" />
+      </div>
+      <button type="submit">Agregar Producto</button>
+    </form>
+
+    <h2>Carrito de Compra</h2>
+    <div id="product-cards" class="cards-container"></div>
+
+    <div>
+      <p>Subtotal: $<span id="subtotal">0.00</span></p>
+      <p>Total (incluye IVA y pago con tarjeta): $<span id="total">0.00</span></p>
+    </div>
+    <div>
+      <button type="submit" id="pedidoBtn">finalizar pedido</button>
+
+    </div>
+  </div>
+
+
 
 
   <script src="tp.js"></script>

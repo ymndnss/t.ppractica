@@ -128,6 +128,13 @@ function calcularTotal(subtotal) {
     return total;
 }
 */
+
+
+
+
+
+
+
 //llamamos al elemento por el ID al formulario a travez del "getElementById"
 
 /*"addEventListener" es para maenjar eventos. el evento se activará siempre que ocurra el 
@@ -154,14 +161,14 @@ document.getElementById('product').addEventListener('submit', function (e) {
         precio: precio,
         stock: stock,
         usaTarjeta: usaTarjeta,
-        //almacena una funcion que devuelve el nombre y la marca
+        //"nombreCompleto" almacena una funcion que devuelve el nombre y la marca
         //"return" devuelve el valor de la funcion
         nombreCompleto: function () {
             return this.nombre + ' ' + this.marca;
         }
     };
     //dentro de la funcion del formulario
-    //creamos otra funcion "agregarProducto" que llama a la variable producto 
+    //agregamos otra funcion "agregarProducto" que llama a la variable producto 
     agregarProducto(producto);
 });
 //que es un array? es una lista ordenada de valores que pueden tener cualquier elemento
@@ -236,9 +243,17 @@ function calcularTotal(subtotal) {
 
     let usaTarjeta = document.getElementById('tarjeta').checked;
     if (usaTarjeta) {
+        //al total le sume el subtotal por el 0.5 del recargo por pagar con tarjeta
         total += subtotal * recargoTarjeta;
     }
     //devuelve el valor total
     return total;
 }
+ 
+//llamamos al boton final
+//cuando haga click aparezca un alert de que quiso finalizar el pedido
+document.getElementById("pedidoBtn").addEventListener("click", function() {
+        alert("Finalizó pedido")
+});
+
 
